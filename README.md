@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <a href="https://github.com/renchris/panda-boilerplate">
+    <img alt="Tailwind Logo" src="public/tailwind.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Tailwind Boilerplate
+</h1>
 
-## Getting Started
+A starter template that uses the NextJS App Router, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 👍 NextJS App Router
+
+The Next.js App Router is the current standard for building applications using React's latest features.
+
+The significant feature of Next.js App Router are [Server Components](https://nextjs.org/docs/app/building-your-application/rendering/server-components).
+
+- Previously, with the Pages Router, each of your pages are rendered on the client or the server.
+
+- Currently, with the App Router, your components within each page can be rendered on the client or the server.
+
+This allows more of your application to receive the [benefits of server rendering](https://nextjs.org/docs/app/building-your-application/rendering/server-components#benefits-of-server-rendering).
+
+## 🚀 Usage
+
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the application:
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Code Style
 
-## Learn More
+We use ESLint for our code style. You may modify the ESLint rule set in the `.eslintrc.js` file. Include ESLint On Save in your code editor Preferences settings.
 
-To learn more about Next.js, take a look at the following resources:
+```JSON
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+See
+- [ESLint Rules](https://eslint.org/docs/latest/rules/)
+- [Airbnb ESLint Style Guide](https://github.com/airbnb/javascript)
+- [TypeScript ESLint Rules](https://typescript-eslint.io/rules/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🧐 What's inside?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A quick look at the top-level files and directories where we made our feature changes in the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    src
+    └── app
+         ├── layout.tsx
+         └── page.tsx
+    eslintrc.js
+
+1. **`/src/app`**: This directory will contain all of the code related to what you will see on the front-end of the site. `src` is a convention for “source code” and `app` is the convention for “app router”.
+
+1. **`src/app/layout.tsx`**: This file contains the Root Layout. The JSX elements in this file applies onto all routes with routes being `{children}`. See [NextJS Documentation: Layouts](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#layouts)
+
+1. **`src/app/page.tsx`**: This file contains the code for the front-end page. See [NextJS Documentation: Pages](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#pages)
+
+1. **`eslintrc.js`**: This file contains the ESLint rule configuration.
